@@ -176,7 +176,7 @@ jobs:
           replacesArtifacts: true
           tag: ${{ env.TOOLCHAIN_TAG }}
           commit: ${{ env.CURRENT_BRANCH }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           artifacts: output/*
 
   Build:
