@@ -29,6 +29,7 @@ env:
 
 jobs:
   Toolchain:
+    permissions: write-all
     runs-on: ubuntu-20.04
 
     outputs:
