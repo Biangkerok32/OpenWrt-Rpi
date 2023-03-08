@@ -457,7 +457,7 @@ jobs:
         if: steps.hash.outputs.REBUILD_TOOLCHAIN == 'true'
         uses: mknejp/delete-release-assets@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           tag: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
           fail-if-no-assets: false
           fail-if-no-release: false
@@ -473,5 +473,5 @@ jobs:
           tag: ${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
           body: ${{ env.BUILD_DATE }}
           commit: ${{ env.CURRENT_BRANCH }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           artifacts: ${{ env.OPENWRT_ROOT_PATH }}/bin/targets/${{ env.DEVICE_TARGET }}/${{ env.DEVICE_SUBTARGET }}/*
